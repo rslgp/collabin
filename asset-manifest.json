@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/collabin/static/css/main.64619aa5.chunk.css",
+    "main.js": "/collabin/static/js/main.3108b72b.chunk.js",
+    "main.js.map": "/collabin/static/js/main.3108b72b.chunk.js.map",
+    "runtime-main.js": "/collabin/static/js/runtime-main.d882e656.js",
+    "runtime-main.js.map": "/collabin/static/js/runtime-main.d882e656.js.map",
+    "static/js/2.9afc84e3.chunk.js": "/collabin/static/js/2.9afc84e3.chunk.js",
+    "static/js/2.9afc84e3.chunk.js.map": "/collabin/static/js/2.9afc84e3.chunk.js.map",
+    "index.html": "/collabin/index.html",
+    "static/css/main.64619aa5.chunk.css.map": "/collabin/static/css/main.64619aa5.chunk.css.map",
+    "static/js/2.9afc84e3.chunk.js.LICENSE.txt": "/collabin/static/js/2.9afc84e3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d882e656.js",
+    "static/js/2.9afc84e3.chunk.js",
+    "static/css/main.64619aa5.chunk.css",
+    "static/js/main.3108b72b.chunk.js"
+  ]
+}
