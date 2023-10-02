@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/collabin/static/css/main.64619aa5.chunk.css",
-    "main.js": "/collabin/static/js/main.6f2d04de.chunk.js",
-    "main.js.map": "/collabin/static/js/main.6f2d04de.chunk.js.map",
+    "main.js": "/collabin/static/js/main.f469192a.chunk.js",
+    "main.js.map": "/collabin/static/js/main.f469192a.chunk.js.map",
     "runtime-main.js": "/collabin/static/js/runtime-main.d882e656.js",
     "runtime-main.js.map": "/collabin/static/js/runtime-main.d882e656.js.map",
     "static/js/2.130315db.chunk.js": "/collabin/static/js/2.130315db.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.d882e656.js",
     "static/js/2.130315db.chunk.js",
     "static/css/main.64619aa5.chunk.css",
-    "static/js/main.6f2d04de.chunk.js"
+    "static/js/main.f469192a.chunk.js"
   ]
 }
