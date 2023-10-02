@@ -28,6 +28,7 @@ const MultiTag = (props) => {
 
   // Function to split input value by comma and update the 'values' state
   const handleSplitValues = async () => {
+	if(inputValue.length===0) return;
     const splitValues = inputValue
       .toLowerCase()
       .split(",")
