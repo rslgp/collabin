@@ -53,7 +53,6 @@ const PublicPage = () => {
         alignItems: "center",
       }}
     >
-      <h2>Profile Information</h2>
       <Typography variant="h6" component="h3">
         {userData.name}
       </Typography>

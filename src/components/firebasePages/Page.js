@@ -281,7 +281,6 @@ const Page = () => {
         }}
       >
         <NavBar/>
-        <h2>Profile Information</h2>
         <Avatar
           alt="Profile picture"
           src={userData.profilePictureUrl}
@@ -336,7 +335,7 @@ const Page = () => {
 
         <div style={{ display: "flex", flexDirection: "row", width: "80%" }}>
         <TextField
-          label="Add a tag"
+          label="Adicione tags (palavras-chave de busca)"
           value={newTag}
           onChange={handleTagInputChange}
           onKeyUp={checkIfEnterTag}
@@ -349,7 +348,7 @@ const Page = () => {
       </div>
         
         <TextField
-          label="Add Public Contact"
+          label="Adicione um contato público"
           placeholder="Enter contact email, number, social media"
           value={newPublicContact}
           onChange={handlePublicContactInputChange}
@@ -361,7 +360,7 @@ const Page = () => {
 
         
         <TextField
-          label="Add portfolio URL"
+          label="Adicione uma URL para o portfolio"
           placeholder="Enter portfolio URL"
           value={newPortfolio}
           onChange={handlePortfolioInputChange}
@@ -373,7 +372,7 @@ const Page = () => {
 
         
         <TextField
-          label="Add curriculo URL"
+          label="Adicione uma URL para o currículo"
           placeholder="Enter curriculo URL"
           value={newCurriculo}
           onChange={handleCurriculoInputChange}
@@ -383,12 +382,12 @@ const Page = () => {
           }}
         />
 
-        <Button onClick={saveProfile} style={{borderRadius:"12px",height: "60px", width: "80%", marginTop: "8px", backgroundColor:"#f0f2f5"}} >SAVE</Button>
+        <Button onClick={saveProfile} style={{borderRadius:"12px",height: "60px", width: "80%", marginTop: "8px", backgroundColor:"#5294f7", color:"white"}} >Salvar</Button>
 
         
         <Divider variant="fullWidth" sx={{ margin: "16px 0", padding:"10px", width:"70%", mx: "auto" }} />
         
-        <Button onClick={deleteProfile} style={{color:"red", borderRadius:"12px",height: "60px", width: "80%", marginTop: "8px", backgroundColor:"#f0f2f5"}} >Delete Profile</Button>
+        <Button onClick={deleteProfile} style={{color:"red", borderRadius:"12px",height: "60px", width: "80%", marginTop: "8px", backgroundColor:"#f0f2f5"}} >Deletar Perfil</Button>
 
       </Box>
           </>
