@@ -119,7 +119,7 @@ const MultiTag = (props) => {
                     rel="noreferrer"
                     href={`${GlobalVariables.homepage}/${GlobalVariables.publicProfilePage.split(":")[0]}${value.public_id}`}
                   >
-                    {value.public_id}
+                    perfil
                   </Link>
                   {value.name}
 

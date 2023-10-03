@@ -1,5 +1,5 @@
-import React from "react";
-import { Paper, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Paper, Typography, Button } from "@mui/material";
 
 const Tutorial = () => {
   const paperStyle = {
@@ -11,7 +11,13 @@ const Tutorial = () => {
 
   const headingStyle = {
     fontWeight: "bold",
-    color:"red"
+    color: "red",
+  };
+
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setExpanded(!expanded);
   };
 
   return (
@@ -19,29 +25,36 @@ const Tutorial = () => {
       <Typography variant="h6" sx={headingStyle}>
         Adicione tags (requerido) para ser encontrado
       </Typography>
-      <Typography>
-        Perfil sem tag não é encontrado pela busca
-      </Typography>
-      <Typography>
-        Tags podem ser, por exemplo:
-      </Typography>
-      <ul>
-        <Typography component="li">
-          Área de atuação: backend, frontend, gerente de projetos, design, ux, cientista de dados, PO, analista de requisitos, jogos, testes, mobile...
-        </Typography>
-        <Typography component="li">
-          Programação: python, java, javascript, typescript, sql, html...
-        </Typography>
-        <Typography component="li">
-          Frameworks, libraries, ferramentas: figma, react, nodejs, angular, nextjs, express, django, spring boot, flask...
-        </Typography>
-        <Typography component="li">
-          Sigla da universidade que estuda, disponibilidade remoto...
-        </Typography>
-      </ul>
-      <Typography variant="h6" sx={{fontWeight:"bold"}}>
-        Qualquer termo relevante para a busca te achar!
-      </Typography>
+      {expanded ? (
+        <>
+          <Typography>
+            Perfil sem tag não é encontrado pela busca
+          </Typography>
+          <Typography>
+            Tags podem ser, por exemplo:
+          </Typography>
+          <ul>
+            <Typography component="li">
+              Área de atuação: backend, frontend, gerente de projetos, design, ux, cientista de dados, PO, analista de requisitos, jogos, testes, mobile...
+            </Typography>
+            <Typography component="li">
+              Programação: python, java, javascript, typescript, sql, html...
+            </Typography>
+            <Typography component="li">
+              Frameworks, libraries, ferramentas: figma, react, nodejs, angular, nextjs, express, django, spring boot, flask...
+            </Typography>
+            <Typography component="li">
+              Sigla da universidade que estuda, disponibilidade remoto...
+            </Typography>
+          </ul>
+          <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+            Qualquer termo relevante para a busca te achar!
+          </Typography>
+        </>
+      ) : null}
+      <Button onClick={toggleExpand} color="primary">
+        {expanded ? "Esconder" : "Ler mais"}
+      </Button>
     </Paper>
   );
 };

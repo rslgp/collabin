@@ -345,7 +345,7 @@ const Page = () => {
             margin: "10px -8px 0 0",
           }}
         />
-        <Button onClick={handleAddTag} style={{borderRadius:"12px",height: "60px", margin: "8px 0 0 8px", backgroundColor:"#f0f2f5"}} >ADD</Button>
+        <Button onClick={handleAddTag} style={{borderRadius:"12px",height: "60px", margin: "8px 0 0 8px", backgroundColor:"#5294f7", color:"white"}} >ADD</Button>
       </div>
         
         <TextField
