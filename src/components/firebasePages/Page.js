@@ -223,18 +223,18 @@ const Page = () => {
   }, []); // Empty dependency array to run this effect only once
 
   const handleAddTag = () => {
-    if (newTag.trim() === "" || tags.includes(newTag)) return; // Don't add empty tags
+    var novaTag = newTag.trim().toLowerCase();
+    if (novaTag === "" || tags.includes(novaTag)) return; // Don't add empty tags
 
     //if (!/^[A-Za-z ]+$/.test(newTag)) {
     //  // Check if the newTag contains only letters
     //  alert("Tags can only contain letters.");
     //  return;
     //}
-    const tag_formatted =  newTag.toLowerCase();
-    setNewTag(tag_formatted);
+    setNewTag(novaTag);
 
     // Add the new tag to the tags array
-    const updatedTags = [...tags, tag_formatted];
+    const updatedTags = [...tags, novaTag];
     setTags(updatedTags);
 
     // Update the userData in the database
