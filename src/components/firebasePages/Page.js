@@ -37,6 +37,7 @@ const Page = () => {
   const [newPortfolio, setNewPortfolio] = useState("");
   const [newCurriculo, setNewCurriculo] = useState("");
   const [tutorial, setTutorial] = useState(false);
+  const [unsavedChanges, setUnsavedChanges] = useState(false);
   
   const showNotification = (message, type = "success") => {
     toast[type](message, {
@@ -138,8 +139,12 @@ const Page = () => {
     storedData.curriculo= newCurriculo;    
     localStorage.setItem("userData", JSON.stringify(storedData));
 
+    // Set unsavedChanges to false after saving
+    setUnsavedChanges(false);
+    
     //alert("Perfil salvo");
     showNotification("Perfil salvo", "success");
+    
   };
 
   useEffect(() => {
@@ -257,15 +262,19 @@ const Page = () => {
 
   const handleTagInputChange = (e) => {
     setNewTag(e.target.value);
+    setUnsavedChanges(true);
   };
   const handlePublicContactInputChange = (e) => {
     setNewPublicContact(e.target.value);
+    setUnsavedChanges(true);
   };
   const handlePortfolioInputChange = (e) => {
     setNewPortfolio(e.target.value);
+    setUnsavedChanges(true);
   };
   const handleCurriculoInputChange = (e) => {
     setNewCurriculo(e.target.value);
+    setUnsavedChanges(true);
   };
 
   return (
@@ -295,7 +304,7 @@ const Page = () => {
         </Typography>
         <Typography variant="body1">{userData.email}</Typography>
         <Typography variant="body1">
-          Public Id:
+          Página pública: 
           <a
             target="_blank"
             rel="noreferrer"
@@ -339,6 +348,7 @@ const Page = () => {
           value={newTag}
           onChange={handleTagInputChange}
           onKeyUp={checkIfEnterTag}
+          onBlur={handleAddTag}
           sx={{
             width: "100%",
             margin: "10px -8px 0 0",
@@ -349,7 +359,7 @@ const Page = () => {
         
         <TextField
           label="Adicione um contato público"
-          placeholder="Enter contact email, number, social media"
+          placeholder="Insira seu contato email, número ou url de rede social"
           value={newPublicContact}
           onChange={handlePublicContactInputChange}
           sx={{
@@ -361,7 +371,6 @@ const Page = () => {
         
         <TextField
           label="Adicione uma URL para o portfolio"
-          placeholder="Enter portfolio URL"
           value={newPortfolio}
           onChange={handlePortfolioInputChange}
           sx={{
@@ -373,7 +382,6 @@ const Page = () => {
         
         <TextField
           label="Adicione uma URL para o currículo"
-          placeholder="Enter curriculo URL"
           value={newCurriculo}
           onChange={handleCurriculoInputChange}
           sx={{
@@ -382,7 +390,19 @@ const Page = () => {
           }}
         />
 
-        <Button onClick={saveProfile} style={{borderRadius:"12px",height: "60px", width: "80%", marginTop: "8px", backgroundColor:"#5294f7", color:"white"}} >Salvar</Button>
+        <Button
+          onClick={saveProfile}
+          style={{
+            borderRadius: "12px",
+            height: "60px",
+            width: "80%",
+            marginTop: "8px",
+            backgroundColor: unsavedChanges ? "#FF0000" : "#5294f7", // Change color if there are unsaved changes
+            color: "white",
+          }}
+        >
+          {unsavedChanges ? "Salvar (Alterações não salvas)" : "Salvar"}
+        </Button>
 
         
         <Divider variant="fullWidth" sx={{ margin: "16px 0", padding:"10px", width:"70%", mx: "auto" }} />

@@ -23,7 +23,7 @@ const Tutorial = () => {
   return (
     <Paper sx={paperStyle}>
       <Typography variant="h6" sx={headingStyle}>
-        Adicione tags (requerido) para ser encontrado
+        Adicione tags para ser encontrado e SALVE
       </Typography>
       {expanded ? (
         <>
