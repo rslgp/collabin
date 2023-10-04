@@ -344,7 +344,7 @@ const Page = () => {
 
         <div style={{ display: "flex", flexDirection: "row", width: "80%" }}>
         <TextField
-          label="Adicione tags (palavras-chave de busca)"
+          label="Add tags buscáveis"
           value={newTag}
           onChange={handleTagInputChange}
           onKeyUp={checkIfEnterTag}
