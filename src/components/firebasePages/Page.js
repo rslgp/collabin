@@ -358,7 +358,7 @@ const Page = () => {
       </div>
         
         <TextField
-          label="Adicione um contato público"
+          label="Add contato público"
           placeholder="Insira seu contato email, número ou url de rede social"
           value={newPublicContact}
           onChange={handlePublicContactInputChange}
@@ -370,7 +370,7 @@ const Page = () => {
 
         
         <TextField
-          label="Adicione uma URL para o portfolio"
+          label="Add portfolio link"
           value={newPortfolio}
           onChange={handlePortfolioInputChange}
           sx={{
@@ -381,7 +381,7 @@ const Page = () => {
 
         
         <TextField
-          label="Adicione uma URL para o currículo"
+          label="Add currículo link"
           value={newCurriculo}
           onChange={handleCurriculoInputChange}
           sx={{
